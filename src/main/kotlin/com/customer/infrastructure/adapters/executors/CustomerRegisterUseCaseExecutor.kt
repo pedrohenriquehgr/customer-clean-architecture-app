@@ -11,7 +11,6 @@ class CustomerRegisterUseCaseExecutor(
     private val customerRegisterUseCase: CustomerRegisterUseCase,
     private val customerRegisterExecutorMapper: CustomerRegisterExecutorMapper
 ) {
-
     fun execute(customerRequest: CustomerRegisterRequest): CustomerRegisterResponse {
         val customer = customerRegisterExecutorMapper.toDomain(customerRequest)
         val customerRegistered = customerRegisterUseCase.execute(customer)
