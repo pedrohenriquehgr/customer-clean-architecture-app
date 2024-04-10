@@ -8,3 +8,15 @@ management:
 spring:
   application:
     name: customer-service
+  cloud:
+    stream:
+      kafka:
+        binder:
+          defaultBrokerPort: 29092
+      bindings:
+        customerRegisterStream-in-0:
+          group: customer-register
+          destination: customer-register
+          content-type: application/json
+    function:
+      definition: customerRegisterStream
