@@ -2,8 +2,8 @@ package com.customer.infrastructure.adapters.executors
 
 import com.customer.core.usecases.customer.CustomerRegisterUseCase
 import com.customer.infrastructure.adapters.executors.mappers.CustomerRegisterExecutorMapper
-import com.customer.infrastructure.adapters.rest.dto.CustomerRegisterRequest
-import com.customer.infrastructure.adapters.rest.dto.CustomerRegisterResponse
+import com.customer.infrastructure.adapters.executors.dto.CustomerRegisterRequest
+import com.customer.infrastructure.adapters.executors.dto.CustomerRegisterResponse
 import org.springframework.stereotype.Component
 
 @Component

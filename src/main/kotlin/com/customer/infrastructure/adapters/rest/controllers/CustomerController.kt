@@ -2,9 +2,9 @@ package com.customer.infrastructure.adapters.rest.controllers
 
 import com.customer.infrastructure.adapters.executors.CustomerRegisterUseCaseExecutor
 import com.customer.infrastructure.adapters.executors.GetCustomerByIdUseCaseExecutor
-import com.customer.infrastructure.adapters.rest.dto.CustomerRegisterRequest
-import com.customer.infrastructure.adapters.rest.dto.CustomerRegisterResponse
-import com.customer.infrastructure.adapters.rest.dto.GetCustomerByIdResponse
+import com.customer.infrastructure.adapters.executors.dto.CustomerRegisterRequest
+import com.customer.infrastructure.adapters.executors.dto.CustomerRegisterResponse
+import com.customer.infrastructure.adapters.executors.dto.GetCustomerByIdResponse
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseEntity
 import org.springframework.http.ResponseEntity.*

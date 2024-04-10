@@ -2,7 +2,7 @@ package com.customer.infrastructure.adapters.executors
 
 import com.customer.core.usecases.customer.GetCustomerByIdUseCase
 import com.customer.infrastructure.adapters.executors.mappers.GetCustomerByIdExecutorMapper
-import com.customer.infrastructure.adapters.rest.dto.GetCustomerByIdResponse
+import com.customer.infrastructure.adapters.executors.dto.GetCustomerByIdResponse
 import org.springframework.stereotype.Component
 
 @Component
