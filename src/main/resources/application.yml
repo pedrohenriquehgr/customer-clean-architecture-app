@@ -5,6 +5,25 @@ management:
         include:
           - health
           - prometheus
+  metrics:
+    tags:
+      application: ${spring.application.name}
+      instance: local
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  tracing:
+    sampling:
+      probability: 1.0
+otel:
+  exporter:
+    otlp:
+      endpoint: http://localhost:4317
+      protocol: grpc
+  propagators:
+    - tracecontext
+    - baggage
 spring:
   application:
     name: customer-service
@@ -20,3 +39,8 @@ spring:
           content-type: application/json
     function:
       definition: customerRegisterStream
+logging:
+  level:
+    org:
+      apache:
+        kafka: ERROR
