@@ -24,6 +24,8 @@ otel:
   propagators:
     - tracecontext
     - baggage
+  logs:
+    exporter: none
 spring:
   application:
     name: customer-service
