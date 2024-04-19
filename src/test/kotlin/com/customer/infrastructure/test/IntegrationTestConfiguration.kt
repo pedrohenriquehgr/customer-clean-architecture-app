@@ -11,6 +11,6 @@ class IntegrationTestConfiguration {
     @Bean
     @ServiceConnection
     fun mongoDbContainer(): MongoDBContainer {
-        return MongoDBContainer(DockerImageName.parse("mongo:5.0.26"))
+        return MongoDBContainer(DockerImageName.parse("mongo:6.0.9"))
     }
 }

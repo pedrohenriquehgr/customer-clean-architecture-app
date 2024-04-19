@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mongodb:
-    image: mongo:5.0.26
+    image: mongo:6.0.9
     ports:
       - '127.0.0.1:27017:27017'
     volumes:
