@@ -17,7 +17,7 @@ class CustomerRegisterUseCaseImpl(
 
         if (customerGateway.existsByName(customer.name)) {
             log.warn("Customer already registered")
-            throw Exception()
+            throw Exception("Customer already registered")
         }
 
         return customerGateway.save(customer)
