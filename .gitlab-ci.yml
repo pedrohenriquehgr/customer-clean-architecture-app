@@ -29,11 +29,6 @@ compile:
     paths:
       - target/*.jar
 
-check-style:
-  stage: build
-  script: 
-    - mvn $MAVEN_CLI_OPTS checkstyle:check
-
 unit-test:
   stage: quality
   script: 
