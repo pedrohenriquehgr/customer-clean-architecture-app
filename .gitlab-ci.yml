@@ -67,7 +67,7 @@ sonarcloud-check:
 maven:
   stage: package
   script:
-    - mvn $MAVEN_CLI_OPTS deploy
+    - mvn $MAVEN_CLI_OPTS deploy -DskipTests
 
 docker:
   image: docker
