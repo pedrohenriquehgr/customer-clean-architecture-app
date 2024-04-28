@@ -66,28 +66,27 @@ sonarcloud-check:
 
 maven:
   stage: package
+  when: manual
   script:
     - mvn $MAVEN_CLI_OPTS deploy -DskipTests
 
 docker:
   image: docker
   stage: package
+  when: manual
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker build -t registry.gitlab.com/pedrohenriquehgr/customer-clean-architecture-app .
     - docker push registry.gitlab.com/pedrohenriquehgr/customer-clean-architecture-app
 
-deploy-dev:
-  stage: deploy
-  script: 
-    - echo 'WIP - Deploy to Development environment...'
-
 deploy-qa:
   stage: deploy
-  script: 
+  when: manual
+  script:
     - echo 'WIP - Deploy to QA environment...'
 
-deploy-prd:
+deploy-production:
   stage: deploy
+  when: manual
   script: 
     - echo 'WIP - Deploy to Production environment...'
